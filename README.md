@@ -11,29 +11,18 @@ Ce projet consiste à concevoir des maquettes de pages pour un site web de consu
 
 ## Structure du projet
 
-Le projet est organisé en 3 dossiers :
+### static
+Dossier comprenants les dossier css et js (code statique), et les images.
+### views
+Dossier comprenants les vues (pages du site en .ejs (rendu html pour express, dynamique))
+(homepage.ejs, la page d'accueil "principale", 
+login.ejs, la page d'identification,
+incident.ejs, la page de signalement d'incident)
 
-### html
+### racine
+app.js (fichier js principal pour initialiser le site et le lancer)
 
-Ce dossier comprend les 3 pages HTML :
-- **principale.html** : page de consultation des incidents.
-- **incident.html** : page d'ajout d'incidents.
-- **identification.html** : page d'identification/création de comptes.
+## Comment lancer le site ?
 
-### css
-
-Ce dossier comprend 2 pages CSS :
-- **principale.css** : page de style basique pour la page principale (tableau).
-- **header.css** : page de style de la barre de navigation (imbriquée dans une balise "header"), réutilisée sur l'ensemble des pages HTML.  
-
-### features
-
-Ce dossier comprend 3 fichiers features pour les fonctionnalités suivantes :
-- **connexion.feature**  
-- **consultation_incident.feature**  
-- **nouveau_incident.feature**  
-
-## Améliorations possibles
-
-- Interface utilisateur plus stylisée.  
-- Interface utilisateur plus simple (navigation de page en page).
+0. installer les dépendances (node_modules) avec npm install
+1. Se rendre à la racine du projet et executer : node .\app.js  
