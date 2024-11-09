@@ -43,7 +43,7 @@ async function run_db_connection() {
 
     // Signup verification route
     app.post("/signup_verification", async (req, res) => {
-      // handling form infos 
+      // form infos 
       const username_sign_up = req.body.username_sign_up;
       const password_sign_up = req.body.password_sign_up;
       const completeName_sign_up = req.body.completeName_sign_up;
@@ -82,7 +82,39 @@ async function run_db_connection() {
       const incidents_c = await getIncidents();
       res.render("homepage", { incidents_c });
     });
-    
+
+    // login_verification route
+    app.post("/login_verification", async (req, res) => {
+      // form infos
+      const username_login = req.body.username_login;
+      const password_login = req.body.password_login;
+
+      if (!username_login || !password_login) {
+        console.log("An input is empty.");
+        return res.render("login", { error: "Fill in all the inputs." });
+      }
+
+      // VERIFICATION
+      const user = await users_collection.findOne({ username: username_login });
+  
+      if (user && user.password === password_login) {
+        const incidents_c = await getIncidents();
+        console.log('logged in.')
+        return res.render("homepage", { incidents_c });
+
+      }else {
+        if(user){
+          var error_msg = 'Invalid password';
+        }else{
+          var error_msg = 'Invalid Username';
+        } 
+        console.log(error_msg);
+        return res.render("login", { error: error_msg });
+      }
+    });
+
+    // RUN APP
+    console.log('App connected and runing...')
     app.listen(8080)
 
   } catch (error) {
