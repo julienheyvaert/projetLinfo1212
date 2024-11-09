@@ -1,0 +1,27 @@
+[
+    {
+      "description": "An incident 1",
+      "address": "an adress 1",
+      "reported_by": "User 1",
+      "date": "date 1"
+    },
+    {
+      "description": "An incident 2",
+      "address": "an adress 2",
+      "reported_by": "User 2",
+      "date": "date 2"
+    },
+    {
+      "description": "An incident 3",
+      "address": "an adress 3",
+      "reported_by": "User 3",
+      "date": "date 3"
+    },
+    {
+        "description": "An incident 4",
+        "address": "an adress 4",
+        "reported_by": "User 4",
+        "date": "date 4"
+      }
+  ]
+  
