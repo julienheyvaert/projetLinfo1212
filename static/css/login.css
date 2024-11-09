@@ -83,3 +83,26 @@ input[type=submit]:focus{
     outline: 4px solid var(--v_blue);
     transition: 0.1s ease-out;
 }
+#logoutButton{
+    display: none;
+    text-align: center;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 20px;
+    width: 55%;
+    border: none;
+    outline: 1px solid transparent;
+    padding: 10px;
+    background-color: var(--v_text_color);
+    color: white;
+    border-radius: 10px;
+    outline: 2px solid white;
+}
+#logoutButton:hover{
+    font-weight: 700;
+    width: 57%;
+    outline: 1px solid #d62828;
+    background-color: #d62828;
+    box-shadow: 5px 5px 20px #d62828;
+}

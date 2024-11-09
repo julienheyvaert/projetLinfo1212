@@ -56,15 +56,20 @@
             <div class="section_title">Report a new incident</div>
             <div class="section_description">Fill in the form to report a new incident.</div>
             <form id="incident_form" action="/incident_verification" method="post">
-                <label for="incident_description">Description</label>
+                <p id="notConnectedError">Please Login to report an incident.</p>
+                <label id="incident_description_label" for="incident_description">Description</label>
                 <textarea id="incident_description" name="incident_description" placeholder="Describe the incident "></textarea>
 
-                <label for="incident_adress">Adress</label>
+                <label id="incident_adress_label" for="incident_adress">Adress</label>
                 <textarea id="incident_adress" name="incident_adress" placeholder="Enter incident address"></textarea>
                 <div id="submit_box">
                     <input id="incident_submit" type="submit" value="Report Incident">
                 </div>
             </form>
         </div>
+        <script src="/javascript/incidentPageErrors.js"></script>
+        <script>
+            displayError(<%= error %>);
+        </script>
     </body>
 </html>

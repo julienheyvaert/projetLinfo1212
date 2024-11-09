@@ -11,7 +11,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     </head>
-    <body>
+    <body onload="displayLogout('<%= username || '' %>');">
         <nav id="header_nav">
             <div id="header_titleBox" href="">
                 <img id="header_logo" src="logo2.png">
@@ -54,7 +54,7 @@
             <div class="sub_page" id="login_sub_page">
                 <div class="section_title">Login</div>
                 <div class="section_description">Enter you information to login.</div>
-
+                <a href="/logout" id="logoutButton">Logout</a>
                 <form  id="login_form" action="/login_verification" method="post">
                     <p id="empty_inputs_login">Fill in all the inputs.</p>
                     <div id="info_row">
@@ -68,6 +68,7 @@
                     </div>
                     <input type="submit" id="bouton" value="Login">
                 </form>
+                
             </div>
             <div class="sub_page" id="signup_sub_page">
                 <div class="section_title">Sign Up</div>

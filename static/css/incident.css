@@ -15,6 +15,11 @@
     width: 80%;
     padding: 10px;
 }
+#notConnectedError{
+    font-style: italic;
+    color: #d62828;
+    display: none;
+}
 label{
     font-size: 17px;
     font-weight: 600;

@@ -29,3 +29,12 @@ function displayError(errorCode) {
     wrong_label.innerText = errorMessage;
     wrong_input.style.border = '2px solid #CB4D56';
 }
+
+function displayLogout(usernameSession) {   
+    if (usernameSession) {
+        document.getElementById('login_form').style.display = 'none';
+        document.getElementsByClassName('section_title')[0].innerText = usernameSession;
+        document.getElementsByClassName('section_description')[0].style.display = 'none';
+        document.getElementById('logoutButton').style.display = 'block';
+    }
+}

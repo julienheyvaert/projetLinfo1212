@@ -52,7 +52,7 @@ async function run_db_connection() {
 
     // Incident route
     app.get("/incident", (req, res) => {
-      res.render("incident", {username : req.session.username});
+      res.render("incident", {error : null, username : req.session.username});
     });
 
     // Login route
@@ -129,7 +129,7 @@ async function run_db_connection() {
         }else{
           var error_code = 2;
         } 
-        return res.render("homepage", { error: error_code, username : req.session.username });
+        return res.render("login", { error: error_code, username : req.session.username });
       }
     });
 
@@ -140,13 +140,17 @@ async function run_db_connection() {
       const incident_adress  = req.body.incident_adress;
       
       if (!incident_description || !incident_adress) {
-        console.log("An input is empty.");
-        return res.render("incident", { error: 0, username: req.session.username });
+        if(!incident_description){
+          errorCode = 0
+        }else{
+          errorCode = 1
+        }
+        return res.render("incident", { error: errorCode, username: req.session.username });
       }
     
       // user is connected ?
       if (!req.session.username) {
-        return res.render("incident", { error: 1, username: req.session.username });
+        return res.render("incident", { error: 2, username: req.session.username });
       }
   
       // date
@@ -172,6 +176,12 @@ async function run_db_connection() {
 
       const incidents_c = await getIncidents();
       res.render("homepage", { incidents_c, username: req.session.username });
+    });
+
+    //logout route
+    app.get("/logout", (req, res) => {
+      req.session.username = null;
+      res.redirect('/login');
     });
 
 
