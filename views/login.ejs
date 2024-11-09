@@ -24,14 +24,12 @@
                     <div id="item_underline"></div>
                 </div>
             </a>
-
             <a href="incident" class="naviguation_item_box">
                 <div class="naviguation_item">
                     <p>Report Incident</p>
                     <div id="item_underline"></div>
                 </div>
             </a>
-
             <div id="header_c_toRight">
                 <div id="header_search">
                     <input type="search" placeholder="Search">
@@ -52,12 +50,13 @@
                 <div class="section_description">Enter you information to login.</div>
 
                 <form  id="login_form" action="/login_verification" method="post">
+                    <p id="empty_inputs_login">Fill in all the inputs.</p>
                     <div id="info_row">
-                        <label for="username_login">Username</label>
-                        <input type="text" id="username_login" name="username_login" placeholder="Enter your Username" required>
+                        <label id="username_login_label" for="username_login">Username</label>
+                        <input type="text" id="username_login" name="username_login" placeholder="Enter your Username" >
                     </div>
                     <div id="info_row">
-                        <label for="password_login">Password</label>
+                        <label id="password_login_label" for="password_login">Password</label>
                         <input type="password" id="password_login" name="password_login" placeholder="Enter your Password" required>
                         
                     </div>
@@ -68,8 +67,9 @@
                 <div class="section_title">Sign Up</div>
                 <div class="section_description">Don't have an account ? Create one !</div>
                 <form  id="signup_form" action="/signup_verification" method="post">
+                    <p id="empty_inputs_signup">Fill in all the inputs.</p>
                     <div id="info_row">
-                        <label for="username_sign_up">Username</label>
+                        <label id="username_signup_label" for="username_sign_up">Username</label>
                         <input type="text" id="username_sign_up" name="username_sign_up" placeholder="Enter a Username" required>
                     </div>
                     <div id="info_row">
@@ -81,7 +81,7 @@
                         <input type="text" id="completeName_sign_up" name="completeName_sign_up" placeholder="Enter your Complete Name" required>
                     </div>
                     <div id="info_row">
-                        <label for="email_sign_up">Email Address</label>
+                        <label id="email_signup_label" for="email_sign_up">Email Address</label>
                         <input type="email" id="email_sign_up" name="email_sign_up" placeholder="Enter your Email Address" required>
                     </div>
                     <input type="submit" value="Sign Up">
@@ -89,4 +89,8 @@
             </div>
         </div>
     </body>
+    <script src="/javascript/loginPageErrors.js"></script>
+    <script>
+        displayError(<%= error %>);
+    </script>
 </html>

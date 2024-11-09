@@ -38,7 +38,7 @@ async function run_db_connection() {
 
     // Login route
     app.get("/login", (req, res) => {
-      res.render("login");
+      res.render("login", { error: null });
     });
 
     // Signup verification route
@@ -51,21 +51,21 @@ async function run_db_connection() {
 
       if (!username_sign_up || !password_sign_up || !completeName_sign_up || !email_sign_up) {
         console.log("An iput is empty.");
-        return res.render("login", { error: "Fill in all the inputs." });
+        return res.render("login", { error: 3 });
       }
 
       // unique username verif
       const username_taken = await users_collection.findOne({ username: username_sign_up });
       if (username_taken) {
         console.log("username already used.");
-        return res.render("login", { error: "Username already used." });
+        return res.render("login", { error: 4 });
       }
 
       // unique email verif
       const email_taken = await users_collection.findOne({ email: email_sign_up });
       if (email_taken) {
         console.log("Email already used.");
-        return res.render("login", { error: "Email already used." });
+        return res.render("login", { error: 5 });
       }
 
       // insertion
@@ -91,7 +91,7 @@ async function run_db_connection() {
 
       if (!username_login || !password_login) {
         console.log("An input is empty.");
-        return res.render("login", { error: "Fill in all the inputs." });
+        return res.render("login", { error: 0 });
       }
 
       // VERIFICATION
@@ -104,12 +104,11 @@ async function run_db_connection() {
 
       }else {
         if(user){
-          var error_msg = 'Invalid password';
+          var error_code = 1;
         }else{
-          var error_msg = 'Invalid Username';
+          var error_code = 2;
         } 
-        console.log(error_msg);
-        return res.render("login", { error: error_msg });
+        return res.render("login", { error: error_code });
       }
     });
 

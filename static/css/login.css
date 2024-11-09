@@ -25,6 +25,12 @@ form{
     height: 80%;
     align-items: center;
 }
+#empty_inputs_login, #empty_inputs_signup{
+    font-size:14px;
+    font-style: italic;
+    color: #d62828;
+    display: none;
+}
 #info_row{
     margin-top: 10px;
     width: 60%;
