@@ -10,8 +10,6 @@ var bodyParser = require("body-parser");
 app.use(bodyParser.urlencoded({ extended: true })); 
 
 var session = require('express-session');
-var https = require('https');
-var fs = require('fs');
 
 app.use(session({
   secret: "propre123",
