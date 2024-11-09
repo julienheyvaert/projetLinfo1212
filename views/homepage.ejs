@@ -64,63 +64,15 @@
                     <th style="width: 15%;">Date</th>
                 </tr>
             </thead>
-            <tbody>
+            <tbody> 
+            <% for(var i=0; i < incidents_c.length; i++) { %>
                 <tr>
-                    <td>Une description 1</td>
-                    <td>Une adresse 1</td>
-                    <td>Un utilisateur 1</td>
-                    <td>Une date 1</td>
+                    <td><%= incidents_c[i].description %></td>
+                    <td><%= incidents_c[i].address %></td>
+                    <td><%= incidents_c[i].reported_by %></td>
+                    <td><%= incidents_c[i].date %></td>
                 </tr>
-                <tr>
-                    <td>Une description 2</td>
-                    <td>Une adresse 2</td>
-                    <td>Un utilisateur 2</td>
-                    <td>Une date 2</td>
-                </tr>
-                <tr>
-                    <td>Une description 2</td>
-                    <td>Une adresse 2</td>
-                    <td>Un utilisateur 2</td>
-                    <td>Une date 2</td>
-                </tr>
-                <tr>
-                    <td>Une description 2</td>
-                    <td>Une adresse 2</td>
-                    <td>Un utilisateur 2</td>
-                    <td>Une date 2</td>
-                </tr>
-                <tr>
-                    <td>Une description 2</td>
-                    <td>Une adresse 2</td>
-                    <td>Un utilisateur 2</td>
-                    <td>Une date 2</td>
-                </tr>
-                <tr>
-                    <td>Une description 2</td>
-                    <td>Une adresse 2</td>
-                    <td>Un utilisateur 2</td>
-                    <td>Une date 2</td>
-                </tr><tr>
-                    <td>Une description 2</td>
-                    <td>Une adresse 2</td>
-                    <td>Un utilisateur 2</td>
-                    <td>Une date 2</td>
-                </tr><tr>
-                    <td>Une description 2</td>
-                    <td>Une adresse 2</td>
-                    <td>Un utilisateur 2</td>
-                    <td>Une date 2</td>
-                </tr><tr>
-                    <td>Une description 2</td>
-                    <td>Une adresse 2</td>
-                    <td>Un utilisateur 2</td>
-                    <td>Une date 2</td>
-                </tr><tr>
-                    <td>Une description 3</td>
-                    <td>Une adresse 3</td>
-                    <td>Un utilisateur 3</td>
-                    <td>Une date 3</td>
-                </tr>
+            <% }; %>
             </tbody>
         </table>
     </div>
