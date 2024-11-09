@@ -40,7 +40,13 @@
                 <a href="login" id="account_box">
                     <div id="account_icon_box"></div>
                     <div id="account_username_box">
-                        <p id="account_username">Login</p>
+                        <p id="account_username">
+                            <% if (username) { %>
+                                <%= username %>
+                            <% } else { %>
+                                Login
+                            <% } %>
+                        </p>
                         <div id="account_underline"></div>
                     </div>
                 </a>
@@ -49,7 +55,7 @@
         <div class="page_content">
             <div class="section_title">Report a new incident</div>
             <div class="section_description">Fill in the form to report a new incident.</div>
-            <form id="incident_form">
+            <form id="incident_form" action="/incident_verification" method="post">
                 <label for="incident_description">Description</label>
                 <textarea id="incident_description" name="incident_description" placeholder="Describe the incident "></textarea>
 

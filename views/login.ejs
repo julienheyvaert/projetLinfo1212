@@ -38,7 +38,13 @@
                 <a href="login" id="account_box">
                     <div id="account_icon_box"></div>
                     <div id="account_username_box">
-                        <p id="account_username">Login</p>
+                        <p id="account_username">
+                            <% if (username) { %>
+                                <%= username %>
+                            <% } else { %>
+                                Login
+                            <% } %>
+                        </p>
                         <div id="account_underline"></div>
                     </div>
                 </a>
@@ -53,7 +59,7 @@
                     <p id="empty_inputs_login">Fill in all the inputs.</p>
                     <div id="info_row">
                         <label id="username_login_label" for="username_login">Username</label>
-                        <input type="text" id="username_login" name="username_login" placeholder="Enter your Username" >
+                        <input type="text" id="username_login" name="username_login" placeholder="Enter your Username" value="<%=username%>" required>
                     </div>
                     <div id="info_row">
                         <label id="password_login_label" for="password_login">Password</label>

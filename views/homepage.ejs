@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -41,7 +40,13 @@
             <a href="login" id="account_box">
                 <div id="account_icon_box"></div>
                 <div id="account_username_box">
-                    <p id="account_username">Login</p>
+                    <p id="account_username">
+                        <% if (username) { %>
+                            <%= username %>
+                        <% } else { %>
+                            Login
+                        <% } %>
+                    </p>
                     <div id="account_underline"></div>
                 </div>
             </a>
