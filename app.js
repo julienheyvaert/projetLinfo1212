@@ -98,7 +98,7 @@ async function run_db_connection() {
       // get incidents for hompgae
       const incidents_c = await getIncidents();
       req.session.username = username_sign_up;
-      res.render("login", { incidents_c, username : req.session.username });
+      res.render("login", {error: null, incidents_c, username : req.session.username });
     });
 
     // login_verification route
