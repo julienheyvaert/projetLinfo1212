@@ -1,21 +1,20 @@
 [
-    {
-      "username": "Julien",
-      "password": "Julien123",
-      "fullName": "Julien Heyvaert",
-      "email": "julien@mail.com"
-    },
-    {
-      "username": "Keilan",
-      "password": "Keilan123",
-      "fullName": "Keilan Ntaganda ",
-      "email": "keilan@mail.com"
-    },
-    {
-      "username": "Mohamed",
-      "password": "Mohamed123",
-      "fullName": "Mohamed El Yattouti",
-      "email": "mohamed@mail.com"
-    }
-  ]
-  
+  {
+    "username": "Julien",
+    "password": "Julien123",
+    "fullName": "Julien Heyvaert",
+    "email": "julien@mail.com"
+  },
+  {
+    "username": "Keilan",
+    "password": "Keilan123",
+    "fullName": "Keilan Ntaganda ",
+    "email": "keilan@mail.com"
+  },
+  {
+    "username": "Mohamed",
+    "password": "Mohamed123",
+    "fullName": "Mohamed El Yattouti",
+    "email": "mohamed@mail.com"
+  }
+]
