@@ -1,100 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <title>Mobility Watch</title>
-        <link rel="icon" type="image/x-icon" href="logo2.png">
-        <link rel="stylesheet" type="text/css" href="css/constants.css">
-        <link rel="stylesheet" type="text/css" href="css/general.css">
-        <link rel="stylesheet" type="text/css" href="css/homepage.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    </head>
-<<<<<<< HEAD
+
+<head>
+    <meta charset="utf-8">
+    <title>Mobility Watch</title>
+    <link rel="icon" type="image/x-icon" href="logo2.png">
+    <link rel="stylesheet" type="text/css" href="css/constants.css">
+    <link rel="stylesheet" type="text/css" href="css/general.css">
+    <link rel="stylesheet" type="text/css" href="css/homepage.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
     <body>
-=======
-    
-    <body>
-        
->>>>>>> 11dbd51 (Description de vos modifications)
-    <nav id="header_nav">
-        <div id="header_titleBox" href="">
-            <img id="header_logo" src="logo2.png">
-            <div id="header_title">MobilityWatch.</div>
-        </div>
 
-        <a href="/" id="header_home_btn" class="naviguation_item_box">
-            <div class="naviguation_item">
-                <p>Home</p>
-                <div id="item_underline"></div>
+        <nav id="header_nav">
+            <div id="header_titleBox" href="">
+                <img id="header_logo" src="logo2.png">
+                <div id="header_title">MobilityWatch.</div>
             </div>
-        </a>
 
-        <a href="incident" class="naviguation_item_box">
-            <div class="naviguation_item">
-                <p>Report Incident</p>
-                <div id="item_underline"></div>
-            </div>
-        </a>
-
-        <div id="header_c_toRight">
-            <div id="header_search">
-<<<<<<< HEAD
-                <input type="search" placeholder="Search">
-                <div id="search_icon"></div>
-=======
-                <form action="/search_results" method="get" style="display: flex;">
-                    <input type="text" name="query" placeholder="Search incidents">
-                    <button type="submit">Search</button>
-                </form>
-                
->>>>>>> 11dbd51 (Description de vos modifications)
-            </div>
-            <a href="login" id="account_box">
-                <div id="account_icon_box"></div>
-                <div id="account_username_box">
-                    <p id="account_username">
-                        <% if (username) { %>
-                            <%= username %>
-                        <% } else { %>
-                            Login
-                        <% } %>
-                    </p>
-                    <div id="account_underline"></div>
+            <a href="/" id="header_home_btn" class="naviguation_item_box">
+                <div class="naviguation_item">
+                    <p>Home</p>
+                    <div id="item_underline"></div>
                 </div>
             </a>
+
+            <a href="incident" class="naviguation_item_box">
+                <div class="naviguation_item">
+                    <p>Report Incident</p>
+                    <div id="item_underline"></div>
+                </div>
+            </a>
+
+            <div id="header_c_toRight">
+                <div id="header_search">
+                    <input type="search" placeholder="Search">
+                    <div id="search_icon"></div>
+                    <form action="/search_results" method="get" style="display: flex;">
+                        <input type="text" name="query" placeholder="Search incidents">
+                        <button type="submit">Search</button>
+                    </form>
+
+                </div>
+                <a href="login" id="account_box">
+                    <div id="account_icon_box"></div>
+                    <div id="account_username_box">
+                        <p id="account_username">
+                            <% if (username) { %>
+                                <%= username %>
+                                    <% } else { %>
+                                        Login
+                                        <% } %>
+                        </p>
+                        <div id="account_underline"></div>
+                    </div>
+                </a>
+            </div>
+        </nav>
+        <div id="current_date"></div>
+        <div class="page_content" style="margin-top: -40px;">
+            <div class="section_title">MobilityWatch.</div>
+            <div class="section_description">MobilityWatch is a platform for reporting and visualizing mobility-related
+                incidents in Louvain-La-Neuve. Stay informed and contribute by reporting incidents you encounter !</div>
+            <div class="section_title">Reported incidents</div>
+            <div class="section_description">
+                Here are the incidents reported by the community.
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width: 40%;">Description</th>
+                        <th style="width: 30%;">Adress</th>
+                        <th style="width: 15%;">Rapported by</th>
+                        <th style="width: 15%;">Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% for(var i=0; i < incidents_c.length; i++) { %>
+                        <tr>
+                            <td>
+                                <%= incidents_c[i].description %>
+                            </td>
+                            <td>
+                                <%= incidents_c[i].address %>
+                            </td>
+                            <td>
+                                <%= incidents_c[i].reported_by %>
+                            </td>
+                            <td>
+                                <%= incidents_c[i].date %>
+                            </td>
+                        </tr>
+                        <% }; %>
+                </tbody>
+            </table>
         </div>
-    </nav>
-    <div id="current_date"></div>
-    <div class="page_content" style="margin-top: -40px;">
-        <div class="section_title">MobilityWatch.</div>
-        <div class="section_description">MobilityWatch is a platform for reporting and visualizing mobility-related incidents in Louvain-La-Neuve. Stay informed and contribute by reporting incidents you encounter !</div>
-        <div class="section_title">Reported incidents</div>
-        <div class="section_description">
-            Here are the incidents reported by the community.
-        </div>
-        <table>
-            <thead>
-                <tr>
-                    <th style="width: 40%;">Description</th>
-                    <th style="width: 30%;">Adress</th>
-                    <th style="width: 15%;">Rapported by</th>
-                    <th style="width: 15%;">Date</th>
-                </tr>
-            </thead>
-            <tbody> 
-            <% for(var i=0; i < incidents_c.length; i++) { %>
-                <tr>
-                    <td><%= incidents_c[i].description %></td>
-                    <td><%= incidents_c[i].address %></td>
-                    <td><%= incidents_c[i].reported_by %></td>
-                    <td><%= incidents_c[i].date %></td>
-                </tr>
-            <% }; %>
-            </tbody>
-        </table>
-    </div>
     </body>
     <script src="/javascript/date_script.js"></script>
+
 </html>
