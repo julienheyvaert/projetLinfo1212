@@ -7,7 +7,6 @@ describe("test l'input formulaire", () => {
     app.close();
   });
   test("input vide", async () => {
-    const input = "";
     const formulaire = await request(app)
       .post("/signup_verification")
       .execpt(200);
