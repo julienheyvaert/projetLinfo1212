@@ -1,0 +1,212 @@
+*{
+    margin: 0;
+    padding: 0;
+    color: var(--v_text_color);
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    transition: 0.2s ease-out;
+}
+.back-home {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-left: 10px;
+    border: 2px solid white; 
+    border-radius: 5px; 
+    color: white; 
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.back-home:hover {
+    background-color: white; 
+    color: black; 
+}
+
+
+/*NAVBAR*/
+#header_nav{
+    z-index: 2;
+    position: sticky;
+    top: 0;
+    display: flex;
+    flex-direction: row;
+    height: 40px;
+    padding: 5px;
+    align-items: center;
+    border-bottom: 1px solid #000000;
+    background-color: rgb(0, 0, 0);
+}
+#header_titleBox{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 100%;
+    text-decoration: none;
+    color: white;
+}
+#header_title{
+    padding-left: 2px;
+    padding-right: 2px;
+    font-size: 25px;
+    font-weight: 900;
+    color: rgb(255, 255, 255);
+}
+#header_logo{
+    height: 80%;
+    margin-right: 5px;
+    margin-left: 5px;
+   
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+.naviguation_item_box{
+    height: 40px;
+    width: 125px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.naviguation_item p{
+    color: white;
+}
+.naviguation_item_box:hover .naviguation_item p{
+    font-weight: 700;
+    color: white;
+}
+.naviguation_item_box:hover .naviguation_item #item_underline{
+    width: 100%;
+    color: #f0f0f0;
+    
+}
+.naviguation_item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #f0f0f0;
+}
+#item_underline{
+    height: 2px;
+    background-color: white;
+    width: 0%;
+    border-radius: 10px;
+}
+
+#header_c_toRight {
+    display: flex;
+    align-items: center;
+    color: #f0f0f0;
+}
+
+
+/* Styles pour le champ de recherche */
+#search_input {
+    padding: 8px 12px;
+    border: 1px solid #ccc; /* Couleur de la bordure */
+    border-radius: 4px 0 0 4px; /* Bord arrondi */
+    outline: none;
+    font-size: 16px;
+    color: #ffffff; /* Couleur du texte */
+    background-color: rgba(0, 0, 0, 0.5); /* Fond semi-transparent */
+}
+
+/* Styles pour le bouton de recherche */
+#search_button {
+    padding: 8px 12px;
+    background-color: #333; /* Fond du bouton */
+    color: #ffffff; /* Couleur du texte */
+    border: 1px solid #ccc;
+    border-left: none;
+    border-radius: 0 4px 4px 0; /* Bord arrondi à droite */
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+/* Effets sur le bouton au survol */
+#search_button:hover {
+    background-color: #555;
+}
+
+#header_c_toRight{
+    position: absolute;
+    right: 10px;
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    align-items: center;
+}
+#account_box{
+    display: flex;
+    flex-direction: row;
+    height: 40px;
+    align-items: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; 
+}
+#account_username{
+    font-weight: 600;
+    color: white;
+}
+#account_box:hover #account_username{
+    color: white;
+}
+#account_box:hover #account_underline{
+    width: 100%;
+    margin-left: 0%;
+}
+#account_icon_box{
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    border: 1px solid rgb(255, 255, 255);
+    background-image: url('../account_icon.png');
+    background-position: center;
+    background-size: 80%;
+}
+#account_username_box{
+    margin-left: 5px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+#account_underline{
+    width: 100%;
+    height: 2px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    width: 0%;
+    margin-left: 50%;
+}
+/*page content*/
+.page_content{
+    width: 95%;
+    margin-left: 2.5%;
+    font-size: 18px;
+}
+.section_title{
+    margin-top: 40px;
+    font-weight: 700;
+    font-size: 45px;
+    max-width: 80%;
+}
+.section_description{
+    margin:10px;
+    max-width: 80%;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: rgb(0, 0, 0); 
+}
+
+
+

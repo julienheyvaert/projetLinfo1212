@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>MobilityWatch - Login</title>
+        <link rel="icon" type="image/x-icon" href="logo2.png">
+        <link rel="stylesheet" type="text/css" href="css/constants.css">
+        <link rel="stylesheet" type="text/css" href="css/general.css">
+        <link rel="stylesheet" type="text/css" href="css/login.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    </head>
+    <style>
+        /* Forcer le fond transparent */
+        #header_search input[type="text"] {
+            background-color: transparent !important;
+            color: inherit;
+            outline: none;
+        }
+    
+        #header_search input[type="text"]::placeholder {
+            color: #ccc;
+        }
+    
+        /* Supprimer les décorations spécifiques aux navigateurs */
+        ::-webkit-search-decoration, 
+        ::-webkit-search-cancel-button,
+        ::-webkit-search-results-button,
+        ::-webkit-search-results-decoration {
+            display: none;
+        }
+    </style>
+    
+    <body onload="displayLogout('<%= username || '' %>');">
+        <nav id="header_nav">
+            <div id="header_titleBox" href="">
+                <img id="header_logo" src="logo2.png">
+                <div id="header_title">MobilityWatch.</div>
+            </div>
+
+            <a href="/" id="header_home_btn" class="naviguation_item_box">
+                <div class="naviguation_item">
+                    <p>Home</p>
+                    <div id="item_underline"></div>
+                </div>
+            </a>
+            <a href="incident" class="naviguation_item_box">
+                <div class="naviguation_item">
+                    <p>Report Incident</p>
+                    <div id="item_underline"></div>
+                </div>
+            </a>
+            <div id="header_c_toRight">
+                <div id="header_search">
+                    <form action="/search_results" method="get" style="display: flex;">
+                        <input type="text" name="query" placeholder="Search incidents">
+                        
+                    </form>
+                    
+                </div>
+                <a href="login" id="account_box">
+                    <div id="account_icon_box"></div>
+                    <div id="account_username_box">
+                        <p id="account_username">
+                            <% if (username) { %>
+                                <%= username %>
+                            <% } else { %>
+                                Login
+                            <% } %>
+                        </p>
+                        <div id="account_underline"></div>
+                    </div>
+                </a>
+            </div>
+        </nav>
+        <div class="page_content">
+            <div class="sub_page" id="login_sub_page">
+                <div class="section_title">Login</div>
+                <div class="section_description">Enter you information to login.</div>
+                <a href="/logout" id="logoutButton">Logout</a>
+                <form  id="login_form" action="/login_verification" method="post">
+                    <p id="empty_inputs_login">Fill in all the inputs.</p>
+                    <div id="info_row">
+                        <label id="username_login_label" for="username_login">Username</label>
+                        <input type="text" id="username_login" name="username_login" placeholder="Enter your Username" value="<%=username%>" required>
+                    </div>
+                    <div id="info_row">
+                        <label id="password_login_label" for="password_login">Password</label>
+                        <input type="password" id="password_login" name="password_login" placeholder="Enter your Password" required>
+                        
+                    </div>
+                    <input type="submit" id="bouton" value="Login">
+                </form>
+                
+            </div>
+            <div class="sub_page" id="signup_sub_page">
+                <div class="section_title">Sign Up</div>
+                <div class="section_description">Don't have an account ? Create one !</div>
+                <form  id="signup_form" action="/signup_verification" method="post">
+                    <p id="empty_inputs_signup">Fill in all the inputs.</p>
+                    <div id="info_row">
+                        <label id="username_signup_label" for="username_sign_up">Username</label>
+                        <input type="text" id="username_sign_up" name="username_sign_up" placeholder="Enter a Username" required>
+                    </div>
+                    <div id="info_row">
+                        <label for="password_sign_up">password</label>
+                        <input type="password" id="password_sign_up" name="password_sign_up" placeholder="Enter a Password" required>
+                    </div>
+                    <div id="info_row">
+                        <label for="completeName_sign_up">Complete Name</label>
+                        <input type="text" id="completeName_sign_up" name="completeName_sign_up" placeholder="Enter your Complete Name" required>
+                    </div>
+                    <div id="info_row">
+                        <label id="email_signup_label" for="email_sign_up">Email Address</label>
+                        <input type="email" id="email_sign_up" name="email_sign_up" placeholder="Enter your Email Address" required>
+                    </div>
+                    <input type="submit" value="Sign Up">
+                </form>
+            </div>
+        </div>
+    </body>
+    <script src="/javascript/loginPageErrors.js"></script>
+    <script>
+        displayError(<%= error %>);
+    </script>
+</html>

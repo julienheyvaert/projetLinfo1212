@@ -1,0 +1,145 @@
+body {
+    background-color: #f0f0f0; 
+    background-image: url(../car4.jpg); 
+    background-size: cover; 
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+}
+
+#account_username{
+    color: white;
+}
+#account_underline{
+    width: 100%;
+    margin-left: 0%;
+}
+.page_content{
+    height: calc(100vh - 53px);
+    display: flex;
+    flex-direction: row;
+    font-size: 16px;
+}
+.sub_page{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#header_search input[type="text"] {
+    padding: 10px;
+    font-size: 14px;
+    margin-left: 290px;
+    margin-top: 3px;
+    border: 1px solid #ccc;
+    border-radius: 111px 111px;
+    outline: none;
+    color: white;
+    background-color: #000000;
+}    
+
+#header_search button[type="submit"] {
+    padding: 1px;
+    margin-left: 290px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 0 111px 111px 0;
+    cursor: pointer;
+}
+
+#header_search button[type="submit"]:hover {
+    background-color: #555;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    height: 80%;
+    align-items: center;
+}
+
+#empty_inputs_login, #empty_inputs_signup{
+    font-size:14px;
+    font-style: italic;
+    color: #522727;
+    display: none;
+}
+#info_row{
+    margin-top: 10px;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+}
+#info_row label{
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 3px;
+}
+#info_row input{
+    outline: none;
+    border: none;
+    background-color: black;
+    height: 35px;
+    padding: 2.5px;
+    padding-left: 10px;
+    border-radius: 5px;
+    font-weight: 600;
+    border: 2px solid transparent;
+}
+#info_row input:hover{
+    outline: 1px solid #000000;
+    background-color: #110d0d;
+    box-shadow: 5px 5px 20px #fcfcfc;
+}
+#info_row input:focus{
+    border: 2px solid var(--v_blue);
+}
+input[type=submit]{
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 20px;
+    width: 58%;
+    border: none;
+    outline: 1px solid transparent;
+    padding: 10px;
+    background-color: white;
+    color: black;
+    border-radius: 10px;
+}
+input[type=submit]:hover{
+    font-weight: 700;
+    width: 60%;
+    outline: 1px solid white;
+    background-color: white;
+    box-shadow: 5px 5px 20px var(--v_blue);
+}
+input[type=submit]:focus{
+    outline: 4px solid var(--v_blue);
+    transition: 0.1s ease-out;
+}
+#logoutButton{
+    display: none;
+    text-align: center;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 20px;
+    width: 55%;
+    border: none;
+    outline: 1px solid transparent;
+    padding: 10px;
+    background-color: black;
+    color: black(124, 31, 31);
+    border-radius: 10px;
+    outline: 2px solid rgb(255, 245, 245);
+}
+#logoutButton:hover{
+    font-weight: 700;
+    width: 57%;
+    outline: 1px solid #000000;
+    background-color: #110d0d;
+    box-shadow: 5px 5px 20px #fcfcfc;
+}

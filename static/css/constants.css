@@ -1,0 +1,23 @@
+:root{
+    --v_text_color : #ffffff;
+    --v_blue : #000000;
+    --v_lightblue: #000000;
+    --v_grey : #000000;
+    --v_lightgrey : #000000;
+}
+#retourButton:hover{
+    display: none;
+    text-align: center;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 20px;
+    width: 55%;
+    border: none;
+    outline: 1px solid transparent;
+    padding: 10px;
+    background-color: black;
+    color: black(124, 31, 31);
+    border-radius: 10px;
+    outline: 2px solid rgb(255, 245, 245);
+}
