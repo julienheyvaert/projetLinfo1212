@@ -1,16 +1,11 @@
-:root {
-  --v_text_color: #17202a;
-  --v_blue: #4361ee;
-  --v_lightblue: #f8f7ff;
-  --v_grey: #85929e;
-  --v_lightgrey: #f4f6f6;
-  --v_text_color: #ffffff;
-  --v_blue: #000000;
+:root{
+  --v_text_color : #ffffff;
+  --v_blue : #000000;
   --v_lightblue: #000000;
-  --v_grey: #000000;
-  --v_lightgrey: #000000;
+  --v_grey : #000000;
+  --v_lightgrey : #000000;
 }
-#retourButton:hover {
+#retourButton:hover{
   display: none;
   text-align: center;
   font-size: 13px;
