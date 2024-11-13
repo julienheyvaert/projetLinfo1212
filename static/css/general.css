@@ -1,4 +1,4 @@
-* {
+*{
   margin: 0;
   padding: 0;
   color: var(--v_text_color);
@@ -12,21 +12,22 @@
   display: inline-block;
   padding: 10px 20px;
   margin-left: 10px;
-  border: 2px solid white;
-  border-radius: 5px;
-  color: white;
+  border: 2px solid white; 
+  border-radius: 5px; 
+  color: white; 
   text-decoration: none;
   font-weight: bold;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .back-home:hover {
-  background-color: white;
-  color: black;
+  background-color: white; 
+  color: black; 
 }
 
+
 /*NAVBAR*/
-#header_nav {
+#header_nav{
   z-index: 2;
   position: sticky;
   top: 0;
@@ -35,35 +36,35 @@
   height: 40px;
   padding: 5px;
   align-items: center;
-  border-bottom: 1px solid #dcdcdc;
-  background-color: white;
+  border-bottom: 1px solid #000000;
+  background-color: rgb(0, 0, 0);
 }
-#header_titleBox {
+#header_titleBox{
   display: flex;
   flex-direction: row;
   align-items: center;
   height: 100%;
   text-decoration: none;
+  color: white;
 }
-#header_title {
+#header_title{
   padding-left: 2px;
   padding-right: 2px;
   font-size: 25px;
   font-weight: 900;
+  color: rgb(255, 255, 255);
 }
-#header_logo {
+#header_logo{
   height: 80%;
   margin-right: 5px;
   margin-left: 5px;
+ 
 }
-a {
-  text-decoration: none;
-}
-a {
+a{
   text-decoration: none;
   color: white;
 }
-.naviguation_item_box {
+.naviguation_item_box{
   height: 40px;
   width: 125px;
   display: flex;
@@ -73,77 +74,25 @@ a {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.naviguation_item p {
-  color: var(--v_grey);
-}
-.naviguation_item_box:hover .naviguation_item p {
-  font-weight: 700;
-  color: var(--v_blue);
-}
-.naviguation_item_box:hover .naviguation_item #item_underline {
-  width: 100%;
+.naviguation_item p{
   color: white;
 }
-.naviguation_item_box:hover .naviguation_item p {
+.naviguation_item_box:hover .naviguation_item p{
   font-weight: 700;
   color: white;
 }
-.naviguation_item_box:hover .naviguation_item #item_underline {
+.naviguation_item_box:hover .naviguation_item #item_underline{
   width: 100%;
   color: #f0f0f0;
+  
 }
-.naviguation_item {
+.naviguation_item{
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-#item_underline {
-  height: 2px;
-  background-color: var(--v_blue);
-  width: 0%;
-  border-radius: 10px;
-}
-#header_search {
-  border: 1px solid #dcdcdc;
-  outline: 1px solid #dcdcdc;
-  background-color: var(--v_lightgrey);
-  border-radius: 20px;
-  display: flex;
-  flex-direction: row;
-  height: 35px;
-  width: 200px;
-  margin-right: 20px;
-}
-#header_search:hover {
-  border: 1px solid var(--v_blue);
-  outline: 1px solid var(--v_blue);
-}
-#header_search input[type="search"]:focus {
-  padding-left: 4px;
-}
-#header_search input[type="search"] {
-  height: 100%;
-  margin-left: 5%;
-  width: 75%;
-  background-color: transparent;
-  outline: none;
-  border: none;
-}
-#search_icon {
-  height: 100%;
-  width: 20%;
-  background-image: url("../search_icon.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 40%;
-}
-input[type="search"]::-webkit-search-cancel-button {
-  -webkit-appearance: none;
-  appearance: none;
-
   color: #f0f0f0;
 }
-#item_underline {
+#item_underline{
   height: 2px;
   background-color: white;
   width: 0%;
@@ -155,6 +104,7 @@ input[type="search"]::-webkit-search-cancel-button {
   align-items: center;
   color: #f0f0f0;
 }
+
 
 /* Styles pour le champ de recherche */
 #search_input {
@@ -185,7 +135,7 @@ input[type="search"]::-webkit-search-cancel-button {
   background-color: #555;
 }
 
-#header_c_toRight {
+#header_c_toRight{
   position: absolute;
   right: 10px;
   display: flex;
@@ -193,74 +143,69 @@ input[type="search"]::-webkit-search-cancel-button {
   height: 100%;
   align-items: center;
 }
-#account_box {
+#account_box{
   display: flex;
   flex-direction: row;
   height: 40px;
   align-items: center;
   white-space: nowrap;
   overflow: hidden;
-  text-overflow: ellipsis;
+  text-overflow: ellipsis; 
 }
-#account_username {
+#account_username{
   font-weight: 600;
-  color: var(--v_grey);
-}
-#account_box:hover #account_username {
-  color: var(--v_blue);
   color: white;
 }
-#account_box:hover #account_username {
+#account_box:hover #account_username{
   color: white;
 }
-#account_box:hover #account_underline {
+#account_box:hover #account_underline{
   width: 100%;
   margin-left: 0%;
 }
-#account_icon_box {
+#account_icon_box{
   height: 25px;
   width: 25px;
   border-radius: 50%;
-  border: 1px solid black;
   border: 1px solid rgb(255, 255, 255);
-  background-image: url("../account_icon.png");
+  background-image: url('../account_icon.png');
   background-position: center;
   background-size: 80%;
 }
-#account_username_box {
+#account_username_box{
   margin-left: 5px;
   display: flex;
   flex-direction: column;
   overflow: hidden;
 }
-#account_underline {
+#account_underline{
   width: 100%;
   height: 2px;
-  background-color: var(--v_blue);
   background-color: rgb(255, 255, 255);
   border-radius: 10px;
   width: 0%;
   margin-left: 50%;
 }
 /*page content*/
-.page_content {
+.page_content{
   width: 95%;
   margin-left: 2.5%;
   font-size: 18px;
 }
-.section_title {
+.section_title{
   margin-top: 40px;
   font-weight: 700;
   font-size: 45px;
   max-width: 80%;
 }
-.section_description {
-  margin: 10px;
+.section_description{
+  margin:10px;
   max-width: 80%;
 }
-
 table {
   width: 100%;
   border-collapse: collapse;
-  background-color: rgb(0, 0, 0);
+  background-color: rgb(0, 0, 0); 
 }
+
+
