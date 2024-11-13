@@ -1,6 +1,16 @@
+
+body {
+    background-color: #f0f0f0; 
+    background-image: url(../car3.jpg); 
+    background-size: cover; 
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+}
+
 #header_incident_btn p{
     font-weight: 700;
-    color: #4361ee;
+    color: #ffffff;
+
 }
 #header_incident_btn #item_underline{
     width: 100%;
@@ -20,6 +30,32 @@
     color: #d62828;
     display: none;
 }
+
+
+#header_search input[type="text"] {
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    color: white;
+    background-color: #000000;
+}    
+
+#header_search button[type="submit"] {
+    padding: 8px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+}
+
+#header_search button[type="submit"]:hover {
+    background-color: #555;
+}
+
+
 label{
     font-size: 17px;
     font-weight: 600;
@@ -39,8 +75,11 @@ textarea{
     border: 2px solid transparent;
 }
 textarea:hover{
-    background-color: #fbfcfc;
-    border: 2px solid var(--v_grey);
+
+    outline: 1px solid #000000;
+    background-color: #110d0d;
+    box-shadow: 5px 5px 20px #fcfcfc;
+
 }
 textarea:focus{
     border: 2px solid var(--v_blue);
@@ -57,11 +96,14 @@ input[type=submit]{
     margin-top: 20px;
     width: 98%;
     border: none;
-    outline: 1px solid transparent;
+
+    outline: 1px solid black;
     padding: 10px;
-    background-color: var(--v_text_color);
-    color: white;
+    background-color: black;
+    color:white;
     border-radius: 10px;
+    
+
 }
 input[type=submit]:hover{
     font-weight: 700;

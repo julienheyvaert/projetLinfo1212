@@ -1,6 +1,43 @@
+
+body {
+    background-color: #f0f0f0; 
+    background-image: url(../car2.png); 
+    background-size: cover; 
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+}
+
+#header_search input[type="text"] {
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    color: white;
+    background-color: #000000;
+}
+
+#header_search button[type="submit"] {
+    padding: 8px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+}
+
+#header_search button[type="submit"]:hover {
+    background-color: #555;
+}
+
+input[type="search"]::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+    appearance: none;
+  }
 #header_home_btn p{
     font-weight: 700;
-    color: #4361ee;
+    color: #ffffff;
+
 }
 #header_home_btn #item_underline{
     width: 100%;
@@ -30,7 +67,9 @@ thead{
     background-color: var(--v_lightblue);
 }
 th{
-    color: #4361ee;
+
+    color: #ffffff;
+
     font-weight: 600;
     padding-left: 10px;
 }
@@ -49,5 +88,35 @@ tbody tr{
     border-bottom: 1px solid #dcdcdc57;
 }
 tbody tr:hover{
-    background-color: #dcdcdc57;
+
+    background-color: #544d4d57;
 }
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  th, td {
+    border: 1px solid white;
+    padding: 12px;
+    text-align: left;
+  }
+  
+  th {
+    background-color: #000000;
+    color: white;
+  }
+  
+  tr:nth-child(even) {
+    background-color: black;
+  }
+  
+  tr:hover {
+    background-color: #ddd;
+  }
+  
+  
+

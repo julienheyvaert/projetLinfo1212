@@ -11,6 +11,30 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     </head>
+<<<<<<< HEAD
+=======
+    <style>
+        /* Forcer le fond transparent */
+        #header_search input[type="text"] {
+            background-color: transparent !important;
+            color: inherit;
+            outline: none;
+        }
+    
+        #header_search input[type="text"]::placeholder {
+            color: #ccc;
+        }
+    
+        /* Supprimer les décorations spécifiques aux navigateurs */
+        ::-webkit-search-decoration, 
+        ::-webkit-search-cancel-button,
+        ::-webkit-search-results-button,
+        ::-webkit-search-results-decoration {
+            display: none;
+        }
+    </style>
+    
+>>>>>>> 11dbd51 (Description de vos modifications)
     <body onload="displayLogout('<%= username || '' %>');">
         <nav id="header_nav">
             <div id="header_titleBox" href="">
@@ -32,8 +56,16 @@
             </a>
             <div id="header_c_toRight">
                 <div id="header_search">
+<<<<<<< HEAD
                     <input type="search" placeholder="Search">
                     <div id="search_icon"></div>
+=======
+                    <form action="/search_results" method="get" style="display: flex;">
+                        <input type="text" name="query" placeholder="Search incidents">
+                        
+                    </form>
+                    
+>>>>>>> 11dbd51 (Description de vos modifications)
                 </div>
                 <a href="login" id="account_box">
                     <div id="account_icon_box"></div>

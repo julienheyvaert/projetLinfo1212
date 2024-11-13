@@ -6,7 +6,9 @@ Ce projet consiste à concevoir des maquettes de pages pour un site web de consu
 ## Projet préparatoire LINFO1212, PP_V1_A12
 
 - **Groupe** : A12  
-- **Membres** : Heyvaert Julien, Ntaganda Keilan
+
+- **Membres** : Heyvaert Julien, Ntaganda Keilan, Mohamed El Yattouti
+
 
 ## Structure du projet
 
