@@ -73,7 +73,7 @@ try {
       !completeName_sign_up ||
       !email_sign_up
     ) {
-      console.log("An iput is empty.");
+      console.log("An input is empty.");
       return res.render("login", {
         error: 3,
         username: req.session.username,
