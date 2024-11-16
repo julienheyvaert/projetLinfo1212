@@ -1,11 +1,24 @@
 {
+  "name": "projet_pp",
+  "version": "1.0.0",
+  "main": "index.js",
+  "jest": {
+    "verbose": true
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
   "dependencies": {
-    "bcrypt": "^5.1.1",
     "body-parser": "^1.20.3",
-    "ejs": "^3.1.10",
-    "express": "^4.21.1",
     "express-session": "^1.18.1",
-    "mongod": "^2.0.0",
-    "mongodb": "^6.10.0"
+    "https": "^1.0.0",
+    "mongodb-memory-server": "^10.1.2",
+    "mongoose": "^8.8.1",
+    "mongosh": "^2.3.3",
+    "sequelize": "^6.37.5",
+    "supertest": "^7.0.0"
   }
 }

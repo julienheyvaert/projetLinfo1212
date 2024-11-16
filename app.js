@@ -248,5 +248,5 @@ async function run_db_connection() {
   }
 }
 
-modele.exports = app;
+module.exports = app;
 run_db_connection();
