@@ -17,6 +17,7 @@
     "https": "^1.0.0",
     "mongodb-memory-server": "^10.1.2",
     "mongoose": "^8.8.1",
+    "mongosh": "^2.3.3",
     "sequelize": "^6.37.5",
     "supertest": "^7.0.0"
   }
