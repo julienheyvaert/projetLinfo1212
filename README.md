@@ -5,29 +5,41 @@ Ce projet consiste à concevoir des maquettes de pages pour un site web de consu
 
 ## Projet préparatoire LINFO1212, PP_V1_A12
 
-- **Groupe** : A12  
+- **Groupe** : A12
 
 - **Membres** : Heyvaert Julien, Ntaganda Keilan, Mohamed El Yattouti
-
 
 ## Structure du projet
 
 ### static
+
 Dossier comprenants les dossier css et js (code statique), et les images.
+
+### test
+
+Dossier comprenants les test basé sur app.js
+
 ### views
+
 Dossier comprenants les vues (pages du site en .ejs (rendu html pour express, dynamique))
-(homepage.ejs, la page d'accueil "principale", 
+(homepage.ejs, la page d'accueil "principale",
 login.ejs, la page d'identification,
 incident.ejs, la page de signalement d'incident)
 
 ### racine
+
 app.js (fichier js principal pour configurer le site et le lancer)
 
 ## Comment lancer le site ?
 
 0. installer les dépendances (node_modules) avec npm install
-(modules a installer : express, ejs, body-parser, express-session, mongodb)
+   (modules a installer : express, ejs, body-parser, express-session, mongodb)
 1. Si premier lancement du site, initialiser les dossier cert.perm et key perm,
-(executer openssl req -x509 -newkey rsa:4096 -keyout key.pem -out cert.pem -days 365)
+   (executer openssl req -x509 -newkey rsa:4096 -keyout key.pem -out cert.pem -days 365)
 2. Se rendre à la racine du projet et executer : node app.js
-3. sur un naviguateur aller a  http://localhost:8080/
+3. sur un naviguateur aller a http://localhost:8080/
+
+## Comment lancer les test ?
+
+0. Ce mettre sur le dossier "projetlinfo1212"
+1. Lancer la commande "npm test" dans le terminale gitbash
